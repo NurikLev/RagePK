@@ -11,29 +11,29 @@
 
 </head>
 <?php
-    // $conn = new mysqli("localhost", "root", "");
-    // if($conn->connect_error){
-    //     die("Ошибка: " . $conn->connect_error);
-    // }
-    // // Создаем базу данных testdb2
-    // $sql = "CREATE DATABASE userMails";
-    // if($conn->query($sql)){
-    //     echo "База данных успешно создана";
-    // } else{
-    //     echo "Ошибка: " . $conn->error;
-    // }
-    // $conn->close();
-    // $conn = new mysqli("localhost", "root", "", "userMails");
-    // if($conn->connect_error){
-    //     die("Ошибка: " . $conn->connect_error);
-    // }
-    // $sql = "CREATE TABLE Users (mails VARCHAR(30));";
-    // if($conn->query($sql)){
-    //     echo "Таблица Users успешно создана";
-    // } else{
-    //     echo "Ошибка: " . $conn->error;
-    // }
-    // $conn->close();
+    $conn = new mysqli("localhost", "root", "");
+    if($conn->connect_error){
+        die("Ошибка: " . $conn->connect_error);
+    }
+    // Создаем базу данных testdb2
+    $sql = "CREATE DATABASE userMails";
+    if($conn->query($sql)){
+        echo "База данных успешно создана";
+    } else{
+        echo "Ошибка: " . $conn->error;
+    }
+    $conn->close();
+    $conn = new mysqli("localhost", "root", "", "userMails");
+    if($conn->connect_error){
+        die("Ошибка: " . $conn->connect_error);
+    }
+    $sql = "CREATE TABLE Users (mails VARCHAR(30));";
+    if($conn->query($sql)){
+        echo "Таблица Users успешно создана";
+    } else{
+        echo "Ошибка: " . $conn->error;
+    }
+    $conn->close();
 
     if (isset($_POST["user_mail"])) {
       
