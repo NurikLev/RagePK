@@ -33,6 +33,6 @@ $mail->AltBody = '';
 if(!$mail->send()) {
     echo 'Error';
 } else {
-	$pagee = 'one';
+	echo '[d[d[d[';
 }
 ?>
